@@ -6,7 +6,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 dotenv.config();
 
-const frontendURL = process.env.CLIENTURL;
+const frontendURL = process.env.PORT || CLIENTURL;
 
 app.use(cors());
 const server = http.createServer(app);
